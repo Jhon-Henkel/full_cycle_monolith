@@ -1,6 +1,7 @@
 import ProductAdmFacadeInterface, {
     AddProductFacadeInputDTO,
-    CheckStockFacadeInputDTO, CheckStockFacadeOutputDTO
+    CheckStockFacadeInputDTO,
+    CheckStockFacadeOutputDTO
 } from "./product-adm.facade.interface"
 import UseCaseInterface from "../../@shared/usecase/use-case.interface"
 
