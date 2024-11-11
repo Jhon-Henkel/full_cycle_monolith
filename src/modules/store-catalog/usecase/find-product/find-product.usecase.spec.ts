@@ -28,6 +28,6 @@ describe('find a product use case unit test', () => {
         expect(result.id).toBe('1')
         expect(result.name).toBe('Product 1')
         expect(result.description).toBe('Description 1')
-        expect(result.salePrice).toBe(100)
+        expect(result.salesPrice).toBe(100)
     })
 })
