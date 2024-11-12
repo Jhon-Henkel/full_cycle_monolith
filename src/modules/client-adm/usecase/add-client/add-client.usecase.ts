@@ -1,6 +1,5 @@
 import ClientGateway from "../../gateway/client.gateway"
 import {AddClientUseCaseInputDto, AddClientUseCaseOutputDto} from "./add-client.usecase.dto"
-import Id from "../../../@shared/domain/value-object/id.value-object"
 import Client from "../../domain/client.entity"
 
 export default class AddClientUseCase {
