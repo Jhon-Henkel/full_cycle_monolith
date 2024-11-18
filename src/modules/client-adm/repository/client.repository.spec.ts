@@ -29,6 +29,8 @@ describe('Client repository test', () => {
             name: 'Client 1',
             email: 'x@x.com',
             address: 'Rua 1',
+            createdAt: new Date(),
+            updatedAt: new Date()
         })
 
         const repository = new ClientRepository()

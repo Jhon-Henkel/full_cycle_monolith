@@ -1,6 +1,7 @@
 import ClientGateway from "../../gateway/client.gateway"
 import {AddClientUseCaseInputDto, AddClientUseCaseOutputDto} from "./add-client.usecase.dto"
 import Client from "../../domain/client.entity"
+import Id from "../../../@shared/domain/value-object/id.value-object"
 
 export default class AddClientUseCase {
     private _clientRepository: ClientGateway
@@ -11,6 +12,7 @@ export default class AddClientUseCase {
 
     async execute(input: AddClientUseCaseInputDto): Promise<AddClientUseCaseOutputDto> {
         const props = {
+            id: new Id(input.id) || new Id(),
             name: input.name,
             email: input.email,
             address: input.address,
