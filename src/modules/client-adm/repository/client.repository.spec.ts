@@ -1,6 +1,8 @@
 import {Sequelize} from "sequelize-typescript"
 import {ClientModel} from "./client.model"
 import ClientRepository from "./client.repository"
+import Client from "../domain/client.entity"
+import Id from "../../@shared/domain/value-object/id.value-object"
 
 describe('Client repository test', () => {
     let sequelize: Sequelize
@@ -19,6 +21,27 @@ describe('Client repository test', () => {
 
     afterEach(async () => {
         await sequelize.close()
+    })
+
+    it('should add a client', async () => {
+        const client = new Client({
+            id: new Id('1'),
+            name: 'Client 1',
+            email: 'x@x.com',
+            address: 'Rua 1',
+        })
+
+        const repository = new ClientRepository()
+        await repository.add(client)
+
+        const result = await ClientModel.findOne({where: {id: '1'}, raw: true})
+        expect(result).toBeDefined()
+        expect(result.id).toBe(client.id.value)
+        expect(result.name).toBe(client.name)
+        expect(result.email).toBe(client.email)
+        expect(result.address).toBe(client.address)
+        expect(result.createdAt).toBeDefined()
+        expect(result.updatedAt).toBeDefined()
     })
 
     it('should find a client', async () => {
