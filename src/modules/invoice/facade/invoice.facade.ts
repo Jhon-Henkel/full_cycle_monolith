@@ -4,6 +4,7 @@ import IInvoiceFacade, {
     IGenerateInvoiceFacadeInputDTO,
 } from "./facade.interface"
 import UseCaseInterface from "../../@shared/usecase/use-case.interface"
+import {GenerateInvoiceUseCaseOutputDto} from "../usecase/generate-invoice/generate-invoice.dto"
 
 export default class InvoiceFacade implements IInvoiceFacade {
     constructor(
@@ -11,7 +12,7 @@ export default class InvoiceFacade implements IInvoiceFacade {
         private findInvoiceUseCase: UseCaseInterface
     ) {}
 
-    generateInvoice(input: IGenerateInvoiceFacadeInputDTO): Promise<void> {
+    generateInvoice(input: IGenerateInvoiceFacadeInputDTO): Promise<GenerateInvoiceUseCaseOutputDto> {
         return this.generateInvoiceUseCase.execute(input)
     }
 

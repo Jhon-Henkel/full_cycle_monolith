@@ -9,6 +9,13 @@ const client = new Client(
         name: 'client 1',
         email: 'x@x.com',
         address: 'address 1',
+        document: '123',
+        street: 'street 1',
+        number: '1',
+        complement: 'complement 1',
+        city: 'city 1',
+        state: 'state 1',
+        zipCode: '123456',
     }
 )
 

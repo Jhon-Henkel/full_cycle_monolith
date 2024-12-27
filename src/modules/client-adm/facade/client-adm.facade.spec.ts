@@ -28,6 +28,13 @@ describe('Client adm facade test', () => {
             name: "John Doe",
             email: "x@x.com",
             address: "Address 1",
+            document: "123",
+            street: "Street 1",
+            number: "1",
+            complement: "Complement 1",
+            city: "City 1",
+            state: "State 1",
+            zipCode: "123456",
         }
 
         await facade.add(input)
@@ -47,6 +54,13 @@ describe('Client adm facade test', () => {
             name: "John Doe",
             email: "x@x.com",
             address: "Address 1",
+            document: "123",
+            street: "Street 1",
+            number: "1",
+            complement: "Complement 1",
+            city: "City 1",
+            state: "State 1",
+            zipCode: "123456",
         }
 
         await facade.add(input)

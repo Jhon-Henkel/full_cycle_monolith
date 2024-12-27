@@ -16,6 +16,13 @@ describe('AddClientUseCase unit test', () => {
             name: 'Client 1',
             email: 'x@x.com',
             address: 'Address 1',
+            document: '123',
+            street: 'Street 1',
+            number: '1',
+            complement: 'Complement 1',
+            city: 'City 1',
+            state: 'State 1',
+            zipCode: '123456',
         }
 
         const result = await useCase.execute(input)
