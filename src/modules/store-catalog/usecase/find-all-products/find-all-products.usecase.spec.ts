@@ -6,14 +6,14 @@ const product = new Product({
     id: new Id("1"),
     name: 'Product 1',
     description: 'Product 1 description',
-    salesPrice: 100
+    price: 100
 })
 
 const product2 = new Product({
     id: new Id("2"),
     name: 'Product 2',
     description: 'Product 2 description',
-    salesPrice: 200
+    price: 200
 })
 
 const mockRepository = {
@@ -32,13 +32,13 @@ describe('find all products use case', () => {
                 id: '1',
                 name: 'Product 1',
                 description: 'Product 1 description',
-                salesPrice: 100
+                price: 100
             },
             {
                 id: '2',
                 name: 'Product 2',
                 description: 'Product 2 description',
-                salesPrice: 200
+                price: 200
             }
         ])
     })

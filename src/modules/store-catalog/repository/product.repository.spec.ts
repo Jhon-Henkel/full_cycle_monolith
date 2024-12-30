@@ -26,14 +26,14 @@ describe('product repository unit test', () => {
             id: "1",
             name: "Product 1",
             description: "Product 1 description",
-            salesPrice: 100
+            price: 100
         })
 
         await ProductModel.create({
             id: "2",
             name: "Product 2",
             description: "Product 2 description",
-            salesPrice: 200
+            price: 200
         })
 
         const repository = new ProductRepository();
@@ -43,11 +43,11 @@ describe('product repository unit test', () => {
         expect(products[0].id.value).toBe("1");
         expect(products[0].name).toBe("Product 1");
         expect(products[0].description).toBe("Product 1 description");
-        expect(products[0].salesPrice).toBe(100);
+        expect(products[0].price).toBe(100);
         expect(products[1].id.value).toBe("2");
         expect(products[1].name).toBe("Product 2");
         expect(products[1].description).toBe("Product 2 description");
-        expect(products[1].salesPrice).toBe(200);
+        expect(products[1].price).toBe(200);
     })
 
     it('should find a product', async () => {
@@ -55,7 +55,7 @@ describe('product repository unit test', () => {
             id: "1",
             name: "Product 1",
             description: "Product 1 description",
-            salesPrice: 100
+            price: 100
         })
 
         const repository = new ProductRepository();
@@ -64,6 +64,6 @@ describe('product repository unit test', () => {
         expect(product.id.value).toBe("1");
         expect(product.name).toBe("Product 1");
         expect(product.description).toBe("Product 1 description");
-        expect(product.salesPrice).toBe(100);
+        expect(product.price).toBe(100);
     })
 })

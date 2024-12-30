@@ -97,13 +97,13 @@ describe('PlaceOrderUseCase unit test', () => {
                     id: new Id("1"),
                     name: "Product 1",
                     description: "some description",
-                    salesPrice: 40
+                    price: 40
                 }),
                 "2": new Product({
                     id: new Id("2"),
                     name: "Product 2",
                     description: "some description",
-                    salesPrice: 30
+                    price: 30
                 })
             }
 
@@ -274,7 +274,7 @@ describe('PlaceOrderUseCase unit test', () => {
                     id: '0',
                     name: 'Product 0',
                     description: 'Description 0 description',
-                    salesPrice: 0
+                    price: 0
                 })
             }
 
@@ -286,7 +286,7 @@ describe('PlaceOrderUseCase unit test', () => {
                 id: new Id('0'),
                 name: 'Product 0',
                 description: 'Description 0 description',
-                salesPrice: 0
+                price: 0
             }))
             expect(mockCatalogFacade.find).toBeCalledTimes(1)
         })

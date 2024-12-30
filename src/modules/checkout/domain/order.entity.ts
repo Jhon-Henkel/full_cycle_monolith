@@ -40,6 +40,6 @@ export default class Order extends BaseEntity implements AggregateRoot {
     }
 
     get total(): number {
-        return this._products.reduce((acc, product) => acc + product.salesPrice, 0)
+        return this._products.reduce((acc, product) => acc + product.price, 0)
     }
 }

@@ -77,7 +77,7 @@ export default class PlaceOrderUseCase implements UseCaseInterface {
             items: products.map(p => ({
                 id: p.id.value,
                 name: p.name,
-                price: p.salesPrice,
+                price: p.price,
             }))
         }) : null
 
@@ -118,7 +118,7 @@ export default class PlaceOrderUseCase implements UseCaseInterface {
             id: new Id(product.id),
             name: product.name,
             description: product.description,
-            salesPrice: product.salesPrice,
+            price: product.price,
         })
     }
 }
